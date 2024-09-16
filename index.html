@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function emaildetect(){
+                emailt = document.getElementById("emailadress");
+                emailct = document.getElementById("emailadressc");
+                if(emailt.value == emailct.value){
+                    document.getElementById("eactext").style.color = "green";
+                }
+                else{
+                    document.getElementById("eactext").style.color = "red";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <p>username:</p>
+            <input type="text" id="username">
+            <p>email adress</p>
+            <input type="email" id="emailadress" oninput="emaildetect()">
+            <p>confirm email adress</p>
+            <input type="email" id="emailadressc" oninput="emaildetect()">
+            <p style="color:crimson;" id="eactext">●</p>
+            <p>password</p>
+            <input type="password" id="password">
+            <p>confirm password</p>
+            <input type="password" id="passwordconf">
+            <br>
+            <br>
+            <button>Sign up</button>
+        </form>
+    </body>
+</html>
