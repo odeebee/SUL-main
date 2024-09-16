@@ -1,0 +1,26 @@
+p.ridge{
+    border-style: ridge;
+    color: white;
+}
+
+body.ridge{
+    border-style: ridge;
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+body{
+    background-color: black;
+}
+
+img.banner{
+    width: 240px;
+    height: 240px;
+}
+
+pre{
+    color: white;
+}

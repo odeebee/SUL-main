@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+        <p class="ridge">SUPPORT UNDERGROUND LIFTING SUPPORT UNDERGROUND LIFTING SUPPORT UNDERGROUND LIFTING SUPPORT UNDERGROUND LIFTING SUPPORT UNDERGROUND LIFTING SUPPORT UNDERGROUND LIFTING SUPPORT UNDERGROUND LIFTING</p>
+    </head>
+    <body>
+        <p>WELCOME TO UNDERGROUND LIFTING . COM</p>
+        <p style="color: chartreuse;">Appilications are open.</p>
+        <p>“When we win, do not forget that these people want you broke, dead, your kids raped and brainwashed, and they think it's funny.”.</p>
+        <img class="banner" src="Baki.jpg"><br>
+        <pre>
+Join the club:
+Send us your email, why you want to improve and what you want to achive.
+Keep it short, keep it secret, keep it safe.
+        </pre>
+        <p>↓ Email goes here ↓</p>
+        <input type="text" id="EmailText">
+        <br>
+        <p>↓ Homework goes here ↓</p>
+        <textarea id="HomeworkText"></textarea>
+        <br>
+        <br>
+        <button onclick="CollectData()">Join.</button>
+    </body>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "6hTBI-6Ajijd88Yir",
+      });
+   })();
+</script>
+    <script>   
+        
+        const service = "service_5iwivcd"
+        const template = "template_bdt0z09"
+
+        function CollectData(){
+            var Emailvalue = document.getElementById("EmailText").value;
+            var Homeworkvalue = document.getElementById("HomeworkText").value;
+            if(Emailvalue || Homeworkvalue != ""){
+                if(Emailvalue.includes("@") == false){
+                    window.alert("Input a correct email.")
+                }
+                if(Emailvalue.includes("@") == true && Homeworkvalue != ""){
+                    sendemail();
+                }
+            }
+            else{
+                window.alert("Write some text in the box first.")
+            }
+
+        }
+
+        function sendemail(){
+            var params = {
+                name: document.getElementById("EmailText").value,
+                email: document.getElementById("EmailText").value,
+                message: document.getElementById("HomeworkText").value
+            }
+            emailjs.send(service,template,params)
+        }
+
+    </script>
+</html>
